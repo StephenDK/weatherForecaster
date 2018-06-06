@@ -15,7 +15,7 @@ class SearchBar extends Component {
     }
 
     onInputChange(event) {
-        console.log(event.target.value);
+        // console.log(event.target.value);
         // when it gets here It cant find this in this.setState So
         // we bind the 'this' keyword above to work in this function
         this.setState({ term: event.target.value })
@@ -49,6 +49,7 @@ class SearchBar extends Component {
         );
     }
 }
+// Hooking up the fetchWeather action creator to the searchbar container
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({ fetchWeather }, dispatch)
 }
